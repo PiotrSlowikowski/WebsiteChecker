@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -31,9 +32,11 @@
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
    <children>
-      <Button fx:id="btn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pressButton" prefHeight="23.0" prefWidth="200.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(#ff5400, #be1d00); -fx-background-insets: 0; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-insets: 1;" text="Check" textAlignment="CENTER" GridPane.rowIndex="8">
+      <Button fx:id="checkBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pressButton" prefHeight="23.0" prefWidth="200.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(#ff5400, #be1d00); -fx-background-insets: 0; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-insets: 1;" text="Check" textAlignment="CENTER" GridPane.rowIndex="8">
          <font>
             <Font name="Arial" size="12.0" />
          </font></Button>
@@ -66,8 +69,8 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" prefHeight="13.0" prefWidth="271.0" text="Date" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-      <Button fx:id="exitbtn" alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="157.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="23.0" prefWidth="200.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(#ff5400, #be1d00); -fx-background-insets: 0; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-insets: 1;" text="Exit" textAlignment="CENTER" GridPane.rowIndex="9">
+      <Label fx:id="dateLabel" prefHeight="13.0" prefWidth="271.0" text="Date" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+      <Button fx:id="exitBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="157.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="23.0" prefWidth="200.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(#ff5400, #be1d00); -fx-background-insets: 0; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-insets: 1;" text="Exit" textAlignment="CENTER" GridPane.rowIndex="9">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
@@ -96,6 +99,9 @@
       <Label fx:id="dateLabel2" layoutX="325.0" layoutY="147.0" prefHeight="17.0" prefWidth="110.0" text="Date" GridPane.columnIndex="1" GridPane.rowIndex="5" />
       <Label fx:id="placeLabel" layoutX="325.0" layoutY="174.0" prefHeight="17.0" prefWidth="111.0" text="Place" GridPane.columnIndex="1" GridPane.rowIndex="7" />
       <Label fx:id="timeLabel" layoutX="325.0" layoutY="185.0" prefHeight="17.0" prefWidth="113.0" text="Time" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <CheckBox fx:id="loopCheckBox" mnemonicParsing="false" prefHeight="17.0" prefWidth="160.0" text="Loop (time intervals):" GridPane.rowIndex="10" />
+      <CheckBox fx:id="emailCheckbox" mnemonicParsing="false" prefHeight="17.0" prefWidth="164.0" text="Email notification" GridPane.rowIndex="11" />
+      <TextField fx:id="timeInterval" promptText="(1-60) seconds" text="1" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
    </children>
    <opaqueInsets>
       <Insets />
